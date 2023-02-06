@@ -1,1 +1,1 @@
-demo1 = "custom variables file to uss this file rum the command terraform apply -var-file=demo.tfvars"
+demo1 = "custom variables file to use this file run the command: terraform apply -auto-approve -var-file=demo.tfvars"
