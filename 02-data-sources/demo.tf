@@ -8,10 +8,19 @@ output "ami" {
   value = data.aws_ami.example
 }
 
-data "aws_instance" "foo"{
-  instance_id = "i-0745b6189c8396f93"
+
+output "instanceOutput" {
+  value = data.aws_instance.foo
 }
 
-output "instance" {
+output "instance-Private_IP" {
+  value = data.aws_instance.foo.private_ip
+}
+
+output "public_IP" {
   value = data.aws_instance.foo.public_ip
+}
+
+data "aws_instance" "foo"{
+  instance_id = "i-0745b6189c8396f93"
 }
