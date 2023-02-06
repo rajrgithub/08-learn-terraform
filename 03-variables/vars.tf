@@ -55,3 +55,18 @@ variable "sample6" {
 output "sample6" {
   value = var.sample6["number"]
 }
+
+## Variables from tfvars
+variable "demo1" {}
+output "demo1" {
+  value = var.demo1
+}
+
+## Variables from SHELL env variables
+variable "demo2" {
+  default = null
+}
+
+output "demo2" {
+  value = var.demo2
+}
