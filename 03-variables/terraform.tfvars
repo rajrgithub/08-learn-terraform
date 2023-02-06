@@ -1,1 +1,1 @@
-demo1 = "Helloo"
+demo1 = "Default variables file for terraform"

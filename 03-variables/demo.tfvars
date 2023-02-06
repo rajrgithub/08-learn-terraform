@@ -1,0 +1,1 @@
+demo1 = "custom variables file to uss this file rum the command terraform apply -var-file=demo.tfvars"
