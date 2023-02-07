@@ -1,0 +1,9 @@
+- name: Create instance
+  hosts: localhost
+  tasks:
+    - name: Create Instance
+      amazon.aws.ec2_instance:
+        instance_type: t3.micri
+        image_id: ami-0a017d8ceb274537d
+        tags:
+          Name: ansible-test
