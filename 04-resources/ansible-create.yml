@@ -5,5 +5,13 @@
       amazon.aws.ec2_instance:
         instance_type: t3.micro
         image_id: ami-0a017d8ceb274537d
-        tags:
-          Name: ansible-test
+#        tags:
+#          Name: ansible-test
+
+
+
+
+
+
+
+# [ centos@workstation ~/08-learn-terraform/04-resources ]$ ansible-playbook ansible-create.yml

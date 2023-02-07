@@ -17,3 +17,5 @@ resource "aws_instance" "web" {
     Name = "test-centos8"
   }
 }
+
+# [ centos@workstation ~/08-learn-terraform/04-resources ]$ terraform apply -auto-approve
