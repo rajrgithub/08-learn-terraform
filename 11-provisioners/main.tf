@@ -42,6 +42,13 @@ resource "aws_instance" "web" {
 //Only provisioner will be recreated NOT the instance
 resource "null_resource" "provision" {
 
+  //If ec2 instance is terminated then only ec2 instance is created  but the provisioner will not run
+  // To run the provisioner triggers will be used
+  // below will trigger the provisioner when new new instance is created
+  triggers = {
+    instance_id = aws_instance.web.id
+  }
+
   provisioner "remote-exec" {
     connection {
       host     = aws_instance.web.public_ip
