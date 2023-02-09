@@ -1,10 +1,12 @@
 resource "aws_instance" "web" {
-  count         = 1
+  #count         = 1
+  count         = length(var.components)
   ami           = data.aws_ami.centos8.id
   instance_type = "t3.micro"
 
   tags = {
-    Name = "test-centos8"
+    # Name = "test-centos8"
+    Name = var.components[count.index]
   }
 }
 
@@ -36,3 +38,6 @@ output "publicip" {
 }
 
 
+variable "components" {
+  default = ["cart", "catalogue"]
+}
