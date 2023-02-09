@@ -51,7 +51,7 @@ resource "null_resource" "provision" {
 
     inline = [
       //"false"
-      "echo Hello"
+      "echo Hello Test"
     ]
   }
 }
