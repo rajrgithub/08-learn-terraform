@@ -3,7 +3,7 @@ resource "aws_instance" "web" {
   instance_type = "t3.micro"
 
   tags = {
-    Name = test-centos8
+    Name = "test-centos8"
   }
 }
 
@@ -20,7 +20,7 @@ output "publicip" {
   value = aws_instance.web.public_ip
 
   # with count
-  #value = aws_instance.web.*.public_ip
+  # value = aws_instance.web.*.public_ip
 }
 
 
