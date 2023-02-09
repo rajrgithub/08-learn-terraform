@@ -15,6 +15,7 @@ data "aws_ami" "centos8" {
 }
 
 variable "instance_type" {
+  //If the value is passed to module it will override the default value below
   default = "t3.micro"
 }
 variable "name" {}
