@@ -14,7 +14,9 @@ resource "aws_instance" "web" {
   vpc_security_group_ids = [aws_security_group.allow_tls.id]
 
   tags = {
-    Name        = "test-centos8"
+    //Instance can have multiple tags
+    Name        = "web"
+    environment = "DEV"
   }
 
   /*
