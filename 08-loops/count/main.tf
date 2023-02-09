@@ -18,10 +18,21 @@ data "aws_ami" "centos8" {
 
 output "publicip" {
   # without count
-  value = aws_instance.web.public_ip
+  #value = aws_instance.web.public_ip
 
   # with count
-  # value = aws_instance.web.*.public_ip
+  value = aws_instance.web.*.public_ip
+
+#  Error: Missing resource instance key
+#│
+#│   on main.tf line 21, in output "publicip":
+#│   21:   value = aws_instance.web.public_ip
+#│
+#│ Because aws_instance.web has "count" set, its attributes must be accessed on specific instances.
+#│
+#│ For example, to correlate with indices of a referring resource, use:
+#│     aws_instance.web[count.index]
+
 }
 
 
